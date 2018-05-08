@@ -8,11 +8,14 @@ const requestData = category => ({
     type: type.REQUEST_DATA,
     category
 });
-export const receiveData = (data, category) => ({
-    type: type.RECEIVE_DATA,
-    data,
-    category
-});
+export const receiveData = (data, category) => {
+    debugger
+    return {
+        type: type.RECEIVE_DATA,
+        data,
+        category
+    }
+};
 /**
  * 请求数据调用方法
  * @param funcName      请求接口的函数名

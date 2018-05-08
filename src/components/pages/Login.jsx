@@ -15,7 +15,10 @@ class Login extends React.Component {
         receiveData(null, 'auth');
     }
     componentWillReceiveProps(nextProps) {
+
         const { auth: nextAuth = {} } = nextProps;
+        // const nextAuth=nextProps.auth===undefined?{}:nextProps.auth
+        console.log(nextAuth)
         const { history } = this.props;
         if (nextAuth.data && nextAuth.data.uid) {   // 判断是否登陆
             localStorage.setItem('user', JSON.stringify(nextAuth.data));
@@ -38,6 +41,7 @@ class Login extends React.Component {
     };
     render() {
         const { getFieldDecorator } = this.props.form;
+        console.log(this.props)
         return (
             <div className="login">
                 <div className="login-form" >

@@ -23,6 +23,7 @@ const httpData = (state = {}, action) => {
                 [action.category]: handleData(state[action.category], action)
             };
         default:
+            debugger
             return {...state};
     }
 };
